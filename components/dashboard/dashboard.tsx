@@ -1,13 +1,21 @@
 import React from 'react'
 import {Container,Grid} from "@mui/material"
+import SideNav from '../sidenav/sidenav'
+import PostArea from '../postarea/PostArea'
 
 const Dashboard = () => {
   return (
-    <Container maxWidth="xl"sx={{pt:2}} >
-      <Grid container >
-        <Grid xs={3} >sidenav</Grid>
-        <Grid xs={6} >postarea</Grid>
-        <Grid xs={3} >sidenav</Grid>
+    <Container maxWidth="xl"sx={{mt:2}} >
+      <Grid container spacing={2} >
+        <Grid xs={2.5} item>
+            <SideNav/>
+        </Grid>
+        <Grid xs={7} item >
+          <PostArea />
+        </Grid>
+        <Grid xs={2.5} item >
+        <SideNav/>
+        </Grid>
       </Grid>
     </Container>
   )
